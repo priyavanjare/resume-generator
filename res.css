@@ -1,0 +1,45 @@
+#cv-template{
+    display:none;
+}
+#md-4{
+
+    border: 1px solid rgb(38, 86, 242);
+    background-color: rgb(31, 73, 239);
+    color:whitesmoke;
+
+    
+}
+
+#name1{
+    color:whitesmoke;
+    font-weight: 900;
+
+}
+#details{
+
+    padding-left: 40px;
+}
+
+#ind,#date,#place {
+    color:whitesmoke;
+}
+#edui,#proi,#certi{
+    background-color:rgb(31, 73, 239);
+    display: block;
+    margin-bottom:0px;
+    border-radius: 8x;
+    color:whitesmoke;
+    
+}
+#edutemp,#protemp,#certtemp{
+
+    border:  3px solid whitesmoke;
+    border-end-start-radius:10px;
+    border-end-end-radius: 10px;
+    box-shadow: 10px 10px whitesmoke;
+}
+#profes{
+    text-decoration:underline lightslategray;
+}
+
+

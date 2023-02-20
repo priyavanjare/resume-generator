@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="res.css">
+</head>
+<body>
+
+   <div  class="container my-2 feild " id="cv-form">
+      <div class="row">
+        
+        
+        <div class="col-md-4">
+
+            <br><br>
+            <h3>Personal Details</h3>
+            <div class="form-group">
+
+                <label for="name" class="form-label" name="Your Name">Your Name</label><br>
+                <input type="text" id="name" placeholder="Enter here" required="true" class="form-control" required>
+                <br>
+                
+
+
+               
+                <label for="title" name="Wanted Job Title">Job Title</label><br>
+                <input type="text" id="title" placeholder="eg.Teacher" required="true" class="form-control" required><br>
+                
+
+                
+                <label for="add" name="Adress">Adress</label><br>
+                <textarea type="text" id="add" required="true" placeholder="Enter here" class="form-control" required></textarea>
+
+                <div class="input-form mt-3">
+                    
+                <label for="photo">Select your photo</label><br>
+                <input id="imgfeild" type="file" id="photo" required="true" class="form-control" required><br>
+                
+
+        
+                </div>
+              
+
+
+              
+                <label for="pin" name="pin code">Pin code</label><br>
+                <input type="text" id="pin" placeholder="Enter here" required="true" class="form-control" required><br>
+             
+
+              
+                <label for="nati" name="Nationality">Nationality</label><br>
+                <input type="text" id="nati" placeholder="Enter here" required="true" class="form-control" required><br>
+               
+
+              
+                <label for="mob" name="pin code">Phone</label><br>
+                <input type="number" id="mob" placeholder="Enter here" required="true" class="form-control" required><br>
+               
+
+          
+                <label for="email" name="Email">Email</label><br>
+                <input type="text" id="email" placeholder="Enter here" required="true" class="form-control" required><br>
+            
+
+               
+
+              
+                <label for="birth" name="Date of birth">Date of birth</label><br>
+                <input type="text" id="birth" placeholder="Enter here" required="true" class="form-control" required><br>
+
+
+                
+                <label for="birthplace" name="Date of birth">Birth place</label><br>
+                <input type="text" id="birthplace" placeholder="Enter here" required="true" class="form-control" required><br>
+
+                <div class="container" id="hobexp">
+                    <label  for="hob" name="Hobbies">Hobbies</label>
+                    <textarea type="text" id="hob" placeholder="Enter here" required="true" class="form-control hobfield" required></textarea>
+                    
+                    
+    
+                    <div class="container text-center mt-3" id="hobbtn">
+                    <button onclick="hobskill()" class="btn btn-primary">Add</button>
+                    </div>
+                    </div>
+
+
+                
+              
+
+                 
+                
+
+            </div>
+           
+        </div>
+        
+        
+        
+        <div class="col-md-8">
+            <br><br>
+            <h3>Professonal Details</h3>
+            <div class="container" id="eduexp">
+                <label  for="edu" name="Education">Education</label>
+                <textarea type="text" id="edu" rows="5" required="true"   placeholder="Enter here" class="form-control edufield " required></textarea>
+                
+                
+
+                <div class="container text-center mt-3" id="edubtn">
+                <button onclick="eduskill()" class="btn btn-primary">Add</button>
+                </div>
+                </div>
+
+                <div class="container" id="proexp">
+                    <label  for="pro" name="projects">Projects</label>
+                    <textarea type="text" id="pro" rows="5" required="true" placeholder="Enter here" class="form-control profield " required></textarea>
+                    
+                    
+    
+                    <div class="container text-center mt-3" id="probtn">
+                    <button onclick="proskill()" class="btn btn-primary">Add</button>
+                    </div>
+                    </div>
+
+
+                    <div class="container" id="sumexp">
+                        <label  for="sum" name= "skills summary">Skills summary</label>
+                        <textarea type="text" id="sum" rows="5" required="true" placeholder="Enter here" class="form-control sumfield " required></textarea>
+                        
+                        
+        
+                        <div class="container text-center mt-3" id="sumbtn">
+                        <button onclick="sumskill()" class="btn btn-primary">Add</button>
+                        </div>
+                        </div>
+
+
+                        <div class="container" id="certexp">
+                            <label  for="cert" name="Certification">Certification</label>
+                            <textarea type="text" id="cert" rows="5" required="true" placeholder="Enter here" class="form-control certfield " required></textarea>
+                            
+                            
+            
+                            <div class="container text-center mt-3" id="certbtn">
+                            <button onclick="certskill()" class="btn btn-primary">Add</button>
+                            </div>
+                            </div>
+        </div>
+      <div class="container text-center">
+        <button onclick="gencv()" class="btn btn-primary btn-lg">Generate CV</button>
+      </div>
+      <br>
+
+    </div>
+    
+
+
+
+   </div>
+
+
+   <div class="container my-2" id="cv-template">
+
+    <div class="row">
+      
+
+        <div class="col-md-4" id="md-4">
+            <br><br>
+            <div class="containe text-center">
+            <img id="imgtemplate" style="width: 200px;height:200px;border-radius:50%;"src="https://th.bing.com/th/id/OIP.AOX788Noqct365QiEPakEgHaHa?pid=ImgDet&w=1658&h=1658&rs=1" >
+            </div>
+
+              <div id="name1" class="text-center">
+              <h3 id="nametemp">Priya vanjare</h3>
+              <h6 id="jobtemp">Software developer</h6>
+              </div>
+              <br>
+              <br>
+
+              <div class="container" id="details">
+              <h4>Details</h4><br>
+              
+              <h6 id="addtemp">shivaji nagar kurar village malad east mumbai </h6>
+                <h6 id="pintemp">400097</h6>
+
+            <br>
+            <h6 id="conttemp">8369301462 </h6>
+                <h6 id="emailtemp">piuvanjare11@gmail.com</h6><br>
+             
+            <h5 id="nation">Nationality</h5>
+                <h6 id="ind">Indian</h6><br>
+            <h5 id="dabi">Date/Place of birth</h5>
+                <h6 id="date">19/08/1999</h6>
+                <h6 id="place">mumbai</h6><br>
+            <h4>Skills</h4>
+            <ul style="padding-left:20px;" id="skilltemp">
+                <li>good listner</li>
+                <li>boostrap</li>
+                <li>Html</li>
+                <li>javascript</li>
+                <li>react.js</li>
+                <li>css</li>
+
+            </ul>
+
+            <h4>Hobbies</h4>
+            <ul style="padding-left:20px;" id="hobtemp">
+                <li>good listner</li>
+                <li>boostrap</li>
+                <li>Html</li>
+                <li>javascript</li>
+                <li>react.js</li>
+                <li>css</li>
+
+            </ul>
+
+              </div>
+        
+
+
+            
+
+        </div>
+
+        <div class="col-md-8" style="padding-left:160px;">
+            <br>
+            <br>
+            <h2 id="profes">Professional Details:</h2><br><br>
+           
+
+            <h3 id="edui">Education</h3>
+          
+            <ul id="edutemp">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul><br><br><br>
+
+            <h3 id="proi">Projects</h3>
+           
+            <ul id="protemp">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <br><br><br>
+            <h3 id="certi">Certifications</h3>
+            
+            <ul id="certtemp">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+        
+    </div>
+    <div class="container text-center">
+    <button onclick="printcv()" class="btn btn-primary btn-md">Print</button>
+    </div>
+
+   </div>
+
+
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="gen.js">
+
+</script> 
+</body>
+</html>
